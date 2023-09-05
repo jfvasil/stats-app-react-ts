@@ -1,18 +1,22 @@
 import { ReactNode } from "react"
-import 'tailwindcss/tailwind.css'
+import Button from "../components/Button"
 
 type LandingProps = {
     title?: string,
-    children: ReactNode
+    children?: ReactNode
 }
+
+
 
 
 const Landing = ({title = 'Welcome to the Stats App!', children}: LandingProps) => {
   return (
-    <>
-    <h1 className="text-3xl font-serif">{title}</h1>
-    <p className="bg-black mr-4">{children}</p>
-    </>
+    <section className="bg-blue-200 container flex flex-col justify-center items-center">
+    <h1 className="text-3xl font-serif ">{title}</h1>
+    <p className="mr-4 font-mono items-center">{children}</p>
+    <a href='#'><Button>Start Calculating!</Button></a>
+    </section>
+    
   )
 }
 

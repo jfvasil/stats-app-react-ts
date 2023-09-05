@@ -1,12 +1,22 @@
+import {Routes, Route} from 'react-router-dom'
+import Layout from './components/Layout'
 import Landing from './pages/Landing'
 import 'tailwindcss/tailwind.css'
+
 
 function App() {
 
   return (
-    <>
-    <Landing>Here is some text that I am writing</Landing>
-    </>
+  <Routes>
+
+  <Route path='/' element={<Layout />}>
+    <Route path='/welcome' element={<Landing />} />
+
+
+  </Route>
+</Routes>
+
+
   )
 }
 
