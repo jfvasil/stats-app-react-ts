@@ -1,13 +1,13 @@
-import { ReactEventHandler } from "react"
+import { ReactEventHandler, ReactNode } from "react"
 
 type ButtonProps = {
     onclick?: ReactEventHandler,
-    children?: ReactNode
+    children: ReactNode
     }
 
 const Button = ({onclick, children}: ButtonProps) => {
   return (
-    <button className="bg-green-400 rounded" onClick={onclick}>{children}</button>
+    <button className="btn-primary" onClick={onclick}>{children}</button>
   )
 }
 

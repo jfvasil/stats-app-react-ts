@@ -1,22 +1,21 @@
-import { ReactNode } from "react"
-import Button from "../components/Button"
-
-type LandingProps = {
-    title?: string,
-    children?: ReactNode
-}
+import Title from "../components/Title"
+import MidPage from "../components/MidPage"
+import SignUpLink from "../components/SignUpLink"
 
 
 
 
-const Landing = ({title = 'Welcome to the Stats App!', children}: LandingProps) => {
+const Landing = () => {
   return (
-    <section className="bg-blue-200 container flex flex-col justify-center items-center">
-    <h1 className="text-3xl font-serif ">{title}</h1>
-    <p className="mr-4 font-mono items-center">{children}</p>
-    <a href='#'><Button>Start Calculating!</Button></a>
-    </section>
-    
+   <section className="flex flex-col justify-center items-center min-h-screen ">
+    <div className="container">
+    <Title title="Welcome to Stats App!">We pride ourselves on getting you to ace that test</Title>
+    </div>
+    <div className="container flex flex-col items-center justify-center">
+    <MidPage />
+    <SignUpLink />
+    </div>
+   </section>
   )
 }
 
