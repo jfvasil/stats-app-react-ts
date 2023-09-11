@@ -7,10 +7,10 @@ type Title = {
 
 const Title = ({title, children} : Title) => {
   return (
-    <section className='container flex flex-col justify-between items-center'>
-        <h1>{title}</h1>
-        <h3>{children}</h3>
-    </section>
+    <>
+        <h1 className='"mb-5 text-5xl font-bold"'>{title}</h1>
+        <p className='mb-5 text-2xl mt-4'>{children}</p>
+    </>
   )
 }
 
