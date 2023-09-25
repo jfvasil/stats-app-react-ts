@@ -11,6 +11,10 @@ node_modules
 dist
 dist-ssr
 *.local
+tsconfig
+postcss.config
+tailwind.config
+vite.config
 
 # Editor directories and files
 .vscode/*
