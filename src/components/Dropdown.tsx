@@ -19,14 +19,14 @@ const Dropdown = () => {
 
 
     return (
-        <div className="flex flex-col items-center justify-center min-h-screen">
+        <div className="flex flex-col items-center justify-center ">
       <h1 className="text-2xl font-bold mb-4">Prepare to Be Amazed</h1>
       <select
-        className="px-4 py-2 border rounded-lg"
+        className="select select-primary"
         value={calculaton}
         onChange={handleCalcultionSelection}
       >
-        <option value="">Select your Calculation</option>
+        <option disabled selected>Select your Calculation</option>
         {dropDownOptions.map((option, index) => (
           <option key={index} value={option}>
             {option}
