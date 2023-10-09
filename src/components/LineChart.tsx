@@ -1,27 +1,24 @@
 import { Line } from 'react-chartjs-2';
-import { Chart as ChartJS, LineController, LineElement, PointElement, LinearScale, Title } from 'chart.js';
+import { Chart as ChartJS} from 'chart.js';
+import { LineController,LineElement ,LinearScale, CategoryScale, Title, PointElement} from 'chart.js'
+import { ChartData, ChartOptions } from 'chart.js'
 
-ChartJS.register(LineController, LineElement, PointElement, LinearScale, Title);
+
+ChartJS.register( LinearScale, Title, CategoryScale, LineController, PointElement, LineElement)
 
 
-const LineChart = () => {
+type LineChartProps = {
+    chartData: ChartData<'line'>,
+    options?: ChartOptions<'line'>
+}
 
-  const lables = ['January', 'February', 'March', 'April', 'May', 'June', 'July']
-   const chartData ={
-        labels: lables, 
-        datasets: [{
-            id: 1,
-            label: 'test',
-            data: [77, 77, 89, 9, 43, 21, 55], 
-            fill: false, 
-            borderColor: 'rgb(75, 192, 192)', 
-            tension: .01
-        }]
-    }
+
+
+const LineChart = ({chartData, options} : LineChartProps) => {
 
 
   return (
-    <Line  datasetIdKey='id' data={chartData} />
+    <Line  data={chartData} options={options} />
 
   )
 }
