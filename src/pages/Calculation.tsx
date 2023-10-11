@@ -2,9 +2,7 @@ import Dropdown from "../components/Dropdown"
 import Header from "../components/Header"
 import Footer from "../components/Footer"
 import DataEntry from "../components/DataEntry"
-import Button from "../components/Button"
 import React, {ChangeEvent, useState} from 'react'
-
 
 
 const Calculation = () => {
@@ -14,6 +12,8 @@ const [calculation, setCalculation] = useState('')
 
   const handleCalcultionSelection = (e :React.ChangeEvent<HTMLSelectElement>) => {
     setCalculation(e.target.value)
+    history.push(`/results?data=${encodeURIComponent(JSON.stringify(calculation))}`)
+
   }
 
   const dropDownOptions = [
@@ -35,8 +35,8 @@ const [calculation, setCalculation] = useState('')
          dropDownOptions={dropDownOptions} />
          {calculation &&
          <>
-        <DataEntry />
-        <Button>Calculate!</Button>
+        <DataEntry  />
+      
         </>}
       </div>
       <Footer />

@@ -1,4 +1,4 @@
-// import { useState } from "react"
+
 
 interface DropdownProps  {
   calculation: string
@@ -9,19 +9,7 @@ interface DropdownProps  {
 
 const Dropdown = ({calculation, handleCalculationSelection, dropDownOptions}: DropdownProps) => {
   
-  // const [calculaton, setCalculation] = useState('')
   
-  // const dropDownOptions = [
-  //   'Mean',
-  //   'Median',
-  //   'Mode', 
-  //   'Range',
-  //   'Other?'
-  // ]
-  
-  // const handleCalcultionSelection = (e :React.ChangeEvent<HTMLSelectElement>) => {
-  //   setCalculation(e.target.value)
-  // }
 
 
 
