@@ -1,18 +1,17 @@
-import { useState } from "react"
 import Button from "../components/Button"
 
-
-const DataEntry = () => {
-
-
-
-const [data, setData] = useState('')
-
-const handleSubmit = () : void => {
-    localStorage.setItem('data', JSON.stringify(data))
-    console.log(data)
-    setData('')
+type DataEntryProps = {
+    data: string 
+    handleSetData: React.ChangeEventHandler<HTMLInputElement>
+    handleSubmit:React.ReactEventHandler<HTMLButtonElement>
 }
+
+
+const DataEntry = ({data, handleSetData, handleSubmit} : DataEntryProps) => {
+
+
+
+
 
   return (
    <section className=" container h-full flex flex-col justify-evenly">
@@ -21,7 +20,7 @@ const handleSubmit = () : void => {
         <span>Be sure to keep them in this format "........."</span>
         <form className="form-control">
             <input type='text' placeholder="Enter data here" 
-            onChange = {(e) => setData(e.target.value)}
+            onChange = {handleSetData}
             value={data}
             className="input input-bordered input-secondary w-full max-w-xs" />
         </form>
