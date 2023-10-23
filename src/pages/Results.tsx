@@ -3,7 +3,7 @@ import Footer from "../components/Footer"
 import SquareButton from "../components/SquareButton"
 import LineChart from "../components/LineChart"
 import BarChart from "../components/BarChart"
-import { ChartData, ChartOptions } from 'chart.js'
+import { ChartData } from 'chart.js'
 import {mean, median, mode, deviation, range} from '../calculations/stats'
 import { useLocation } from "react-router-dom"
 

@@ -2,7 +2,7 @@ import Dropdown from "../components/Dropdown"
 import Header from "../components/Header"
 import Footer from "../components/Footer"
 import DataEntry from "../components/DataEntry"
-import React, {ChangeEvent, useState} from 'react'
+import React, {useState} from 'react'
 import { createSearchParams, useNavigate } from "react-router-dom"
 
 const Calculation = () => {
