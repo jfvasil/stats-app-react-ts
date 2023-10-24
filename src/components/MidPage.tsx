@@ -1,12 +1,10 @@
 import Button from "./Button";
-
+import { Link } from "react-router-dom";
 
 const MidPage = () => {
   return (
     <>
-    <img src="" alt="" />
-    <a href="#"><Button >Start Calculating!!</Button></a>
-    <img src = '' alt='' />
+    <Link to={'/calculation'}><Button >Start Calculating!!</Button></Link>
     <span>Or</span>
     </>
   )

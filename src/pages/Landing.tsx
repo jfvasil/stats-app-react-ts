@@ -1,6 +1,7 @@
 import Title from "../components/Title"
 import MidPage from "../components/MidPage"
 import SignUpLink from "../components/SignUpLink"
+
 import blackBoard from '../assets/blackboard.mp4'
 
 
