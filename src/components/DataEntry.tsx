@@ -33,7 +33,9 @@ const DataEntry = ({data, handleSetData, handleSubmit} : DataEntryProps) => {
         <input type="file" 
         className="file-input file-input-bordered file-input-secondary w-full max-w-xs" />
         </form>
-        <Button onclick={handleSubmit}>Calculate</Button>
+        <div className="mt-7 w-full flex justify-center">
+        <Button onclick={handleSubmit}>Calculate!!</Button>
+        </div>
     </div>
    </section>
   )

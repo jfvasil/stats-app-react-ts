@@ -7,7 +7,7 @@ type ButtonProps = {
 
 const Button = ({onclick, children}: ButtonProps) => {
   return (
-    <button className="btn btn-lg btn-primary" onClick={onclick}>{children}</button>
+    <button className="btn btn-lg btn-primary w-1/2 text-xl" onClick={onclick}>{children}</button>
   )
 }
 

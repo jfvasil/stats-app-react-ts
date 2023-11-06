@@ -40,7 +40,7 @@ const [data, setData] = useState('')
   return (
     <section>
       <Header />
-      <div className="container flex flex-col justify-evenly items-center min-h-screen ">
+      <div className="flex flex-col justify-evenly items-center min-h-screen">
         <Dropdown
          calculation={calculation} 
          handleCalculationSelection={handleCalcultionSelection}
