@@ -1,9 +1,11 @@
 import {Link} from 'react-router-dom'
+import { useAuth0 } from "@auth0/auth0-react"
+import Login from './Login'
 
 const Header = () => {
 
 
-
+const {user, isAuthenticated} = useAuth0()
 
   return (
     <div className="navbar bg-primary text-primary-content fixed">
@@ -42,7 +44,19 @@ const Header = () => {
     </ul>
   </div>
   <div className="navbar-end">
-    <a className="btn">Non-functional</a>
+   {
+    isAuthenticated ? (
+      <h2 className='text-xl '> Hello, {user?.name}</h2>
+    ) : (
+      
+      <span className='btn'>
+      <Login />
+      </span>
+      
+    )
+   }
+
+    
   </div>
 </div>
   )

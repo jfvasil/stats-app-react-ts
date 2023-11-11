@@ -8,7 +8,7 @@ const Aside = () => {
     <div className="lg:hidden">
         <MobileDrawer />
     </div>
-    <div className="hidden lg:block">
+    <div className="hidden lg:block container">
         <DesktopSideBar />
     </div>
     </>

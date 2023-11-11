@@ -2,7 +2,8 @@
 
 const DesktopSideBar = () => {
   return (
-    <ul className="menu bg-base-200 w-56 rounded-box min-h-screen">
+<section>
+    <ul className="menu bg-base-200 w-56 rounded-box fixed">
   <li><a>Item 1</a></li>
   <li>
     <a>Parent</a>
@@ -20,6 +21,7 @@ const DesktopSideBar = () => {
   </li>
   <li><a>Item 3</a></li>
 </ul>
+</section>
   )
 }
 
