@@ -9,7 +9,8 @@ ChartJS.register( LinearScale, Title, CategoryScale, LineController, PointElemen
 
 type LineChartProps = {
     chartData: ChartData<'line'>,
-    options?: ChartOptions<'line'>
+    options?: ChartOptions<'line'>,
+  
 }
 
 
@@ -18,7 +19,7 @@ const LineChart = ({chartData, options} : LineChartProps) => {
 
 
   return (
-    <Line  data={chartData} options={options} />
+    <Line  data={chartData} options={options}  />
 
   )
 }

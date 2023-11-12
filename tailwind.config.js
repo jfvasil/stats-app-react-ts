@@ -9,7 +9,7 @@ module.exports =  {
 
   daisyui: {
     themes: ['synthwave', 'halloween'], 
-    darkTheme: "halloween", 
+    darkTheme: 'synthwave', 
     base: true, 
     styled: true, 
     utils: true, 

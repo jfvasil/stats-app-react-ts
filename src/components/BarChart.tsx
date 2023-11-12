@@ -9,16 +9,17 @@ ChartJS.register( LinearScale, Title, CategoryScale,BarElement,BarController,Too
 
 type BarChartProps = {
     chartData: ChartData<'bar'>,
-    options?: ChartOptions<'bar'>
+    options?: ChartOptions<'bar'>,
+    ref?: React.MutableRefObject<null>
 }
 
 
 
-const BarChart = ({chartData, options} : BarChartProps) => {
+const BarChart = ({chartData, options,ref} : BarChartProps) => {
 
 
   return (
-    <Bar  data={chartData} options={options} />
+    <Bar  data={chartData} options={options} ref={ref} />
 
   )
 }
