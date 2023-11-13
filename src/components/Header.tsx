@@ -40,13 +40,17 @@ const {user, isAuthenticated} = useAuth0()
           </ul>
         </details>
       </li>
+      {isAuthenticated && (
       <li><Link to='/profile'>Profile</Link></li>
+      )}
     </ul>
   </div>
   <div className="navbar-end">
    {
     isAuthenticated ? (
-      <h2 className='text-xl '> Hello, {user?.name}</h2>
+     <h2 className='btn'><Link to='/profile' 
+     > Hello, {user?.name}
+      </Link></h2>
     ) : (
       
       <span className='btn'>
