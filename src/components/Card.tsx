@@ -69,20 +69,21 @@ plugins: {
     text: 'Your data',
   },
 },
-};
+}; 
+    let upperCalType = calType.charAt(0).toUpperCase() + calType.slice(1)
 
 
   return (
     <div className="card py-4 lg:card-side lg:w-full bg-base-100 shadow-xl -z-10">
     <div className="card-body">
-      <h2 className="card-title">{calType} Calculation</h2>
-      <p>
-        inputs: {inputs}
-        result: {results}
-        Date added: {date.toString()}
+      <h2 className="card-title underline">{upperCalType} Calculation</h2>
+      <p className="flex flex-col leading-8">
+       <span>inputs: {inputs}</span>
+        <span>result: {results}</span>
+        <span>Date added: {date.toString()}</span>
       </p>
     </div>
-    <figure>
+    <figure className="w-full">
       {calType === 'mode' ? (
         <BarChart chartData={barChartData} options={barChartOptions} />
       ) : (

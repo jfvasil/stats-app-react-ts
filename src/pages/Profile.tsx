@@ -46,7 +46,7 @@ useEffect(() => {
     <div className=" container pt-16">
         <div className="flex">
             <Aside />
-            <div className="flex-4">
+            <div className="flex-1">
               <div className="flex flex-col">
                   {data?.map((data, index) => (
                     <Card key={index} 

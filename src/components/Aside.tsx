@@ -1,16 +1,16 @@
-import DesktopSideBar from "./DesktopSideBar"
+// import DesktopSideBar from "./DesktopSideBar"
 import MobileDrawer from "./MobileDrawer"
 
 
 const Aside = () => {
   return (
     <>
-    <div className="lg:hidden">
+    <div>
         <MobileDrawer />
     </div>
-    <div className="hidden lg:block container">
+    {/* <div className="hidden lg:block container">
         <DesktopSideBar />
-    </div>
+    </div> */}
     </>
   )
 }
