@@ -15,14 +15,14 @@ const Results = () => {
 
     const {user, isAuthenticated} = useAuth0()
     const dataString:string | null = localStorage.getItem('data')
-    let data:string = dataString ? JSON.parse(dataString) : ''
-    let numberData = data.split(' ').map(el => Number(el))
-    let labels:string[] = numberData.map((num) => num.toString())
+    const data:string = dataString ? JSON.parse(dataString) : ''
+    const numberData = data.split(' ').map(el => Number(el))
+    const labels:string[] = numberData.map((num) => num.toString())
 
     const location = useLocation()
     const queryParams = new URLSearchParams(location.search)
     const calType = queryParams.get('calType')
-    let cal = calType?.toLocaleLowerCase()
+    const cal = calType?.toLocaleLowerCase()
 
     const chartRef = useRef(null)
 
