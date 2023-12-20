@@ -14,8 +14,8 @@ const Dropdown = ({calculation, handleCalculationSelection, dropDownOptions}: Dr
 
 
     return (
-        <div className="flex flex-col items-center justify-center ">
-      <h1 className="text-2xl font-bold mb-4">Which type of calculation do you need?</h1>
+        <div className="flex flex-col items-center justify-center mb-6 ">
+      <h1 className="md:text-2xl text-xl whitespace-nowrap font-bold mb-4 ">Which type of calculation do you need?</h1>
       <select
         className="select select-primary"
         value={calculation}

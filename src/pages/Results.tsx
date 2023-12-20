@@ -14,14 +14,21 @@ import {axiosInstance} from "../api/axios"
 const Results = () => {
 
     const {user, isAuthenticated} = useAuth0()
+
     const dataString:string | null = localStorage.getItem('data')
+
     const data:string = dataString ? JSON.parse(dataString) : ''
+
     const numberData = data.split(' ').map(el => Number(el))
+
     const labels:string[] = numberData.map((num) => num.toString())
 
     const location = useLocation()
+
     const queryParams = new URLSearchParams(location.search)
+
     const calType = queryParams.get('calType')
+    
     const cal = calType?.toLocaleLowerCase()
 
     const chartRef = useRef(null)

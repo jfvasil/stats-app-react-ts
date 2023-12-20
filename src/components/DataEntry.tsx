@@ -1,20 +1,21 @@
-import Button from "../components/Button"
+
 
 type DataEntryProps = {
     data: string 
     handleSetData: React.ChangeEventHandler<HTMLInputElement>
-    handleSubmit:React.ReactEventHandler<HTMLButtonElement>
+    handleSubmit:React.ReactEventHandler<HTMLButtonElement>,
+    disabled?: boolean
 }
 
 
-const DataEntry = ({data, handleSetData, handleSubmit} : DataEntryProps) => {
+const DataEntry = ({data, handleSetData, disabled} : DataEntryProps) => {
 
 
 
 
 
   return (
-   <section className=" container h-full flex flex-col justify-evenly">
+   <section className="flex flex-col justify-evenly">
     <div className="flex flex-col items-center">
         <div className="leading-relaxed container flex flex-col items-center pb-5 ">
         <h3 className="text-xl ">Enter your data points below</h3>
@@ -23,25 +24,13 @@ const DataEntry = ({data, handleSetData, handleSubmit} : DataEntryProps) => {
         <form className="form-control">
             <input type='text' placeholder="Enter data here" 
             onChange = {handleSetData}
+            disabled={disabled}
             value={data}
             className="input input-bordered input-secondary w-full max-w-xs" />
         </form>
     
     </div>
-        <div className="divider">OR</div>
-    <div className="flex flex-col items-center ">
-        <div className="container leading-relaxed flex flex-col items-center pb-5">
-        <h3 className="text-xl">Add an excel file of you data points</h3>
-        <p>Make sure all data points are in the first column of the sheet</p>
-        </div>
-        <form className="form-control">
-        <input type="file" 
-        className="file-input file-input-bordered file-input-secondary w-full max-w-xs" />
-        </form>
-        <div className="mt-7 w-full flex justify-center">
-        <Button onclick={handleSubmit}>Calculate</Button>
-        </div>
-    </div>
+       
    </section>
   )
 }

@@ -8,7 +8,7 @@ const Header = () => {
 const {user, isAuthenticated, logout} = useAuth0()
 
   return (
-    <div className="navbar bg-primary text-primary-content fixed">
+    <div className="navbar bg-primary text-primary-content fixed z-50">
   <div className="navbar-start">
     <div className="dropdown">
       <label tabIndex={0} className="btn btn-ghost lg:hidden">
