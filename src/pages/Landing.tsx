@@ -20,7 +20,7 @@ const Landing = () => {
         </div>
         <div className="hero-content text-center text-neutral-content">
           <div className="max-w-full">
-            <Title title="Welcome to the Stats App">We are determined to get you the right answer!</Title>
+            <Title title="Welcome to the Stats App">Always here to get you the right answer!</Title>
             <div className="flex flex-col">
               <MidPage />
               <SignUpLink />

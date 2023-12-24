@@ -5,7 +5,7 @@ import Login from './Login'
 const Header = () => {
 
 
-const {user, isAuthenticated, logout} = useAuth0()
+const {user, isAuthenticated} = useAuth0()
 
   return (
     <div className="navbar bg-primary text-primary-content fixed z-50">
@@ -26,9 +26,6 @@ const {user, isAuthenticated, logout} = useAuth0()
         {isAuthenticated && (
         <>
       <li><Link to='/profile'>Profile</Link></li>
-      <li  onClick={() => 
-        logout({ logoutParams: { returnTo: window.location.origin } })}>
-        Logout</li>
       </>
       )}
       </ul>
@@ -50,9 +47,7 @@ const {user, isAuthenticated, logout} = useAuth0()
       {isAuthenticated && (
         <>
       <li><Link to='/profile'>Profile</Link></li>
-      <li  onClick={() => 
-        logout({ logoutParams: { returnTo: window.location.origin } })}>
-        Logout</li>
+      
       </>
       )}
     </ul>

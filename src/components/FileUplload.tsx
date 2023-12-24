@@ -9,7 +9,7 @@ interface FileUplloadProps {
 const FileUplload = ({processedData}: FileUplloadProps) => {
 
     const [file, setFile] = useState<File | null>(null)
-
+    
 
     const handleFileChange = (e:React.ChangeEvent<HTMLInputElement>) => {
 

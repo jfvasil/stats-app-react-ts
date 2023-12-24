@@ -13,7 +13,7 @@ type CardProps = {
 const Card = ({calType, inputs, results, date }:CardProps) => {
 
 
-  let labels = inputs.map(num => num.toString())
+  const labels = inputs.map(num => num.toString())
 
 
   const lineChartData: ChartData<'line'> = {
@@ -70,7 +70,7 @@ plugins: {
   },
 },
 }; 
-    let upperCalType = calType.charAt(0).toUpperCase() + calType.slice(1)
+    const upperCalType = calType.charAt(0).toUpperCase() + calType.slice(1)
 
 
   return (
