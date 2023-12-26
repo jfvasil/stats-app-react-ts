@@ -41,7 +41,6 @@ const [data, setData] = useState('')
     'Median',
     'Mode', 
     'Range',
-    'Other?'
   ]
 
 

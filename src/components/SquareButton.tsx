@@ -4,14 +4,17 @@ type SquareButtonProps = {
 
 const SquareButton = ({onClick}: SquareButtonProps) => {
   return (
-    <div>
-    <button className="btn btn-square">
-  <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" /></svg>
-</button>
-<button onClick={onClick} className="btn btn-square btn-outline">
-  <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" /></svg>
+  <section> 
+    <h3>Add to history?</h3>
+  <div>
+  <button onClick={onClick} className="btn btn-square btn-outline">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="36" height="36" fill="green">
+  <path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z" />
+</svg>
+
 </button>
 </div>
+</section>
   )
 }
 

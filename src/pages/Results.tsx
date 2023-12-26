@@ -6,7 +6,7 @@ import BarChart from "../components/BarChart"
 import { ChartData } from 'chart.js'
 import {mean, median, mode, deviation, range} from '../calculations/stats'
 import { useLocation } from "react-router-dom"
-import { useRef, useEffect } from "react"
+import { useRef, useEffect ,useState} from "react"
 import { useAuth0 } from "@auth0/auth0-react"
 import {axiosInstance} from "../api/axios"
 
@@ -14,6 +14,8 @@ import {axiosInstance} from "../api/axios"
 const Results = () => {
 
     const {user, isAuthenticated} = useAuth0()
+
+    const [success, setSuccess] = useState<boolean>(false)
 
     const dataString:string | null = localStorage.getItem('data')
 
@@ -130,7 +132,7 @@ const Results = () => {
         }
         try{
           const res = await axiosInstance.post('/api', postData)
-          
+          setSuccess(true)
           console.log(res)
         } catch(error){
             console.log(error)
@@ -155,10 +157,9 @@ const Results = () => {
 }
     </div>
     {isAuthenticated && (
-    <section> 
-    <h3>Add to history?</h3>
-    <SquareButton onClick={handleDataPost} />
-    </section>
+    !success ? (
+    <SquareButton onClick={handleDataPost} />) :
+      (<h4>Added Successfully</h4> )
     )}
     <Footer />
     </section>
