@@ -18,7 +18,7 @@ root.render(
     domain={import.meta.env.VITE_REACT_APP_AUTH0_DOMAIN || ''}
     clientId={import.meta.env.VITE_REACT_APP_AUTH0_CLIENT_ID || ''}
     authorizationParams={{
-      redirect_uri: 'http://localhost:5173/calculation'
+      redirect_uri: 'https://main--statsapp.netlify.app/calculation'
     }}>
       <Routes>
         <Route path='/*' element={<App />} />
