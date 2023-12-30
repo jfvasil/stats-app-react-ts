@@ -1,27 +1,21 @@
-# React + TypeScript + Vite
+# Stats App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Welcome to the Stats App repository! This application, built with Vite, React, TypeScript, and various other technologies, empowers users to perform statistical calculations on their data conveniently. Whether you prefer manual input or uploading data via an Excel sheet, this app has you covered. Utilizing OAuth for secure authentication, Tailwind CSS for styling, and Daisy UI for additional UI components, the Stats App delivers a seamless user experience.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Vite, React, TypeScript**: The application is built using Vite as the build tool, React for the UI components, and TypeScript for static typing, ensuring a robust and maintainable codebase.
 
-## Expanding the ESLint configuration
+- **OAuth Authentication**: User authentication is handled securely through OAuth, providing a streamlined and secure login experience.
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+- **Tailwind CSS and Daisy UI**: The app is styled using Tailwind CSS, with additional UI components from Daisy UI, resulting in a clean and responsive design.
 
-- Configure the top-level `parserOptions` property like this:
+- **Data Input Options**: Users can input data manually or upload an Excel sheet, providing flexibility in handling various data sources.
 
-```js
-   parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-   },
-```
+- **Statistical Calculations**: The app supports statistical calculations, including mean, median, mode, and range, empowering users to derive valuable insights from their data.
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+- **Chart.js Integration**: Calculated results are visually presented through dynamic charts created with Chart.js, enhancing the interpretability of the data.
+
+- **User Profiles**: Registered users can create profiles to save their calculations for future reference, fostering a personalized and efficient user experience.
+
+
