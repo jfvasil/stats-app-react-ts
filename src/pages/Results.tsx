@@ -4,7 +4,7 @@ import SquareButton from "../components/SquareButton"
 import LineChart from "../components/LineChart"
 import BarChart from "../components/BarChart"
 import { ChartData } from 'chart.js'
-import {mean, median, mode, deviation, range} from '../calculations/stats'
+import {StatsFuncs} from '../calculations/stats'
 import { useLocation } from "react-router-dom"
 import { useRef, useEffect ,useState} from "react"
 import { useAuth0 } from "@auth0/auth0-react"
@@ -99,15 +99,15 @@ const Results = () => {
     const calculateData = (data:number[] ) => {
       
       if(cal === 'mean'){
-        return mean(data)
+        return StatsFuncs.mean(data)
       } else if(cal === 'median'){
-        return median(data)
+        return StatsFuncs.median(data)
       } else if(cal === 'mode'){
-        return mode(data)
+        return StatsFuncs.mode(data)
       } else if(cal === 'range'){
-        return range(data)
+        return StatsFuncs.range(data)
       } else if(cal === 'deviation'){
-        return deviation(data)
+        return StatsFuncs.deviation(data)
       } else{
         return 'no calculation type found'
       }

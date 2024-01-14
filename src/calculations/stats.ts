@@ -1,33 +1,45 @@
-interface CalculationFunction {
+interface StatsFuncs {
+  mean: CalculationFunction,
+  minMax: (arr:number[]) => number[],
+  median:CalculationFunction,
+  mode: (arr:number[]) => number[],
+  range: CalculationFunction,
+  deviation: CalculationFunction
+}
+
+
+type CalculationFunction = {
     (arr: number[]): number
 }
 
-export const mean: CalculationFunction = (arr) => {
-    let total = arr.length 
-    let sum = arr.reduce((a,c) => a + c, 0)
+
+export const StatsFuncs:StatsFuncs = {
+  mean(arr) {
+    const total = arr.length 
+    const sum = arr.reduce((a,c) => a + c, 0)
     return sum/total 
-  }
-  export const minMax = (arr:number[]):number[] => {
-    let sorted = arr.sort((a,b) => a -b)
+  },
+  minMax(arr){
+    const sorted = arr.sort((a,b) => a -b)
     return [sorted[0], sorted[sorted.length -1]]
-  }
+  },
   
   
-  export const median: CalculationFunction = (arr) => {
-    let sorted = arr.sort((a,b) => a -b)
-    let n = sorted.length
+    median(arr){
+    const sorted = arr.sort((a,b) => a -b)
+    const n = sorted.length
     if(n % 2 === 0){
       return (sorted[(n/2) -1] + sorted[(n/2)]) / 2
     } else{
       return sorted[((n +1) /2) - 1]
     }
-  }
+  },
   
   
-  export function mode(arr:number[]): number[]{
+    mode(arr){
     let maxCount: number = 0
     let modeNums: number[]= []
-    let obj:{[key:number]: number} = {}
+    const obj:{[key:number]: number} = {}
     arr.forEach(x => {
       if(!obj[x]){
         obj[x] = 1
@@ -43,20 +55,20 @@ export const mean: CalculationFunction = (arr) => {
       }
     })  
     return modeNums
-    }
+    },
 
-    export const range: CalculationFunction = (arr) => {
-        let sorted = arr.sort((a,b) => a -b)
+        range(arr){
+        const sorted = arr.sort((a,b) => a -b)
         return Math.abs(sorted[0] - sorted[arr.length - 1])
-      }
+      },
 
-      export const deviation: CalculationFunction = (arr) =>{
-        let mean = (arr.reduce((a,c) => a + c)) / (arr.length)
-        let mapped = arr.map(x => Math.pow((mean - x), 2))
-        let added = mapped.reduce((a, c) => a + c)
-        let close = added / (arr.length - 1)
-        let results = Math.sqrt(close)
+       deviation(arr){
+        const mean = (arr.reduce((a,c) => a + c)) / (arr.length)
+        const mapped = arr.map(x => Math.pow((mean - x), 2))
+        const added = mapped.reduce((a, c) => a + c)
+        const close = added / (arr.length - 1)
+        const results = Math.sqrt(close)
         return Number(results.toFixed(2))
         }
 
-     
+      }
